@@ -1,0 +1,30 @@
+.MagicBlackTimeBox {
+  $CircleSize: 50px;
+
+
+
+
+  height: 60%;
+  width: 60%;
+  border: 1px dashed white;
+  color: red;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .ClockFace {
+
+    font-size: 20pt;
+
+  }
+
+  .Circle{
+    background-color: green;
+    height: $CircleSize;
+    width: $CircleSize;
+    border-radius: 50%;
+  }
+}
