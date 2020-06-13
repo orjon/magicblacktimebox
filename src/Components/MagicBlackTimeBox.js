@@ -81,9 +81,9 @@ class MagicBlackTimeBox extends Component {
           {this.state.theHour}:{this.state.theMins}:{this.state.theSecs}
         </div>
         <div className='ClockFace'>
-          {hourCircles}
-          {decsCircles}
-          {minsCircles}
+          <div className='CircleHours'>{hourCircles}</div>
+          <div className='CircleDecs'>{decsCircles}</div>
+          <div className='CircleMins'>{minsCircles}</div>
         </div>
 
       </div>
