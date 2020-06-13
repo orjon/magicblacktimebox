@@ -1,10 +1,10 @@
-$CircleSize: 50px;
+@import 'Variables.scss';
 
 .CircleGroup {
   width: $CircleSize;
   height: 100%;
   border-radius: $CircleSize;
-  border: 2px dotted cyan;
+  // border: 1px dotted cyan;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -25,12 +25,12 @@ $CircleSize: 50px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  &.rowDecs {
-    margin: 75px 0;
-  }
-  &.rowMins {
-    margin: 150px 0;
-  }
+  // &.rowDecs {
+  //   margin: 75px 0;
+  // }
+  // &.rowMins {
+  //   margin: 150px 0;
+  // }
 }
 
 .Circle2{
@@ -45,12 +45,12 @@ $CircleSize: 50px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  &.rowDecs {
-    margin: 75px 0;
-  }
-  &.rowMins {
-    margin: 150px 0;
-  }
+  // &.rowDecs {
+  //   margin: 75px 0;
+  // }
+  // &.rowMins {
+  //   margin: 150px 0;
+  // }
 }
 
 .blue {
@@ -67,40 +67,40 @@ $CircleSize: 50px;
 }
 
 .pos0 {
-  transform: rotate(0deg+30deg);
+  transform: rotate(0deg);
 }
 .pos1 {
-  transform: rotate(30deg+30deg);
+  transform: rotate(30deg);
 }
 .pos2 {
-  transform: rotate(60deg+30deg);
+  transform: rotate(60deg);
 }
 .pos3 {
-  transform: rotate(90deg+30deg);
+  transform: rotate(90deg);
 }
 .pos4 {
-  transform: rotate(120deg+30deg);
+  transform: rotate(120deg);
 }
 .pos5 {
-  transform: rotate(150deg+30deg);
+  transform: rotate(150deg);
 }
 .pos6 {
-  transform: rotate(180deg+30deg);
+  transform: rotate(180deg);
 }
 .pos7 {
-  transform: rotate(210deg+30deg);
+  transform: rotate(210deg);
 }
 .pos8 {
-  transform: rotate(240deg+30deg);
+  transform: rotate(240deg);
 }
 .pos9 {
-  transform: rotate(270deg+30deg);
+  transform: rotate(270deg);
 }
 .pos10 {
-  transform: rotate(300deg+30deg);
+  transform: rotate(300deg);
 }
 .pos11 {
-  transform: rotate(300deg+30deg);
+  transform: rotate(300deg);
 }
 
 

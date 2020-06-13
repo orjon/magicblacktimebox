@@ -77,9 +77,9 @@ class MagicBlackTimeBox extends Component {
 
     return(
       <div className='MagicBlackTimeBox'>
-        <div className='Time'>
+        {/* <div className='Time'>
           {this.state.theHour}:{this.state.theMins}:{this.state.theSecs}
-        </div>
+        </div> */}
         <div className='ClockFace'>
           <div className='CircleHours'>{hourCircles}</div>
           <div className='CircleDecs'>{decsCircles}</div>

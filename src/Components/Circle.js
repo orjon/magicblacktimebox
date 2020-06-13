@@ -9,10 +9,10 @@ class Circle extends Component {
     return(
       <div className={`CircleGroup ${position}`}>
         <div  className={`Circle1 ${color} ${row}`}>
-          {text}
+          {/* {text} */}
         </div>
-        <div  className={`Circle2 ${row}`}>
-        </div>
+        {/* <div  className={`Circle2 ${row}`}>
+        </div> */}
       </div>
 
     )
