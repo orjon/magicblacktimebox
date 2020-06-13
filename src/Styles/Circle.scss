@@ -1,0 +1,115 @@
+$CircleSize: 50px;
+
+.CircleGroup {
+  width: $CircleSize;
+  height: 100%;
+  border-radius: $CircleSize;
+  border: 2px dotted cyan;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.Circle1{
+
+  color: white;
+  background-color: rgba(0,0,0,0);
+  height: $CircleSize;
+  width: $CircleSize;
+  border-radius: 50%;
+  display: flex;
+  font-weight: 600;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &.rowDecs {
+    margin: 75px 0;
+  }
+  &.rowMins {
+    margin: 150px 0;
+  }
+}
+
+.Circle2{
+  border: 1px dotted grey;
+  background-color: rgba(0,0,0,0.0);
+  color: white;
+  height: $CircleSize;
+  width: $CircleSize;
+  border-radius: 50%;
+  display: flex;
+  font-weight: 600;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &.rowDecs {
+    margin: 75px 0;
+  }
+  &.rowMins {
+    margin: 150px 0;
+  }
+}
+
+.blue {
+  background-color: dodgerblue;
+}
+
+.red{
+  background-color: palevioletred;
+
+}
+
+.green {
+  background-color: teal;
+}
+
+.pos0 {
+  transform: rotate(0deg+30deg);
+}
+.pos1 {
+  transform: rotate(30deg+30deg);
+}
+.pos2 {
+  transform: rotate(60deg+30deg);
+}
+.pos3 {
+  transform: rotate(90deg+30deg);
+}
+.pos4 {
+  transform: rotate(120deg+30deg);
+}
+.pos5 {
+  transform: rotate(150deg+30deg);
+}
+.pos6 {
+  transform: rotate(180deg+30deg);
+}
+.pos7 {
+  transform: rotate(210deg+30deg);
+}
+.pos8 {
+  transform: rotate(240deg+30deg);
+}
+.pos9 {
+  transform: rotate(270deg+30deg);
+}
+.pos10 {
+  transform: rotate(300deg+30deg);
+}
+.pos11 {
+  transform: rotate(300deg+30deg);
+}
+
+
+.oneSeven {
+  position: absolute;
+  width: var(--clockSize);
+  height: var(--clockSize);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  animation: indicatorExpand var(--speedAnimGrow) ease-out;
+}
