@@ -1,10 +1,12 @@
-$CircleSize: 70px;
+$CircleSize: 50px;
 
 $devBorder: 0px;
 
-$ringOuter: 90%;
-$ringInner: 30%;
+$ringOuter: 100%;
+$ringInner: 50%;
+$ringMiddle: calc($ringOuter-(($ringOuter-$ringInnner)/2));
+$ringMiddle: 75%;
 
-$colorHour: dodgerblue;
+$colorHour: blue;
 $colorDecs: red;
 $colorMins: lime;

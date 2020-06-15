@@ -1,5 +1,5 @@
-
 @import 'Variables.scss';
+
 .MagicBlackTimeBox {
 
   position: relative;
@@ -23,10 +23,21 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    height:850px;
-    width:850px;
     top: 50%;
     left: 50%;
+
+    &.portrait {
+      // background-color: lightseagreen;
+      width: 90vw;
+      height: 90vw;
+
+    }
+
+    &.landscape {
+      // background-color: lightblue;
+      width: 90vh;
+      height: 90vh;
+    }
 
     // .empty {
     //   border-radius: 50%;
@@ -70,8 +81,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(60deg);
-    height: 70%;
-    width: 70%;
+    width: $ringMiddle;
+    height: $ringMiddle;
     border: $devBorder dashed red
   }
   .CircleMins {
@@ -84,8 +95,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(60deg);
-    height: 50%;
-    width: 50%;
+    height: $ringInner;
+    width: $ringInner;
     border: $devBorder dashed green
   }
 

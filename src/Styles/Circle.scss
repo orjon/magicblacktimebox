@@ -19,6 +19,8 @@
   background-color: rgba(0,0,0,0);
   height: $CircleSize;
   width: $CircleSize;
+  max-height: 5vw;
+  max-width: 5vw;
   border-radius: 50%;
   display: flex;
   font-weight: 600;
