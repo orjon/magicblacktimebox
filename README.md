@@ -1,3 +1,3 @@
-# Clock face for Willem
+# Clock face for WiM
 
-![Screen shot](/screenshots/Screenshot01.png)
+![Screen shot](/screenshots/screenshot01.png)
