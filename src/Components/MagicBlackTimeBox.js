@@ -78,7 +78,7 @@ class MagicBlackTimeBox extends Component {
 
     var decsCircles = [];
     for (let i = 0; i < clockDecs; i++) {
-      decsCircles.push(<Circle text={i+1} row='rowDecs' color='decs' position={`pos${i}`}/>);
+      decsCircles.push(<Circle text={i+1} row='rowDecs' color='decs' position={`pos${i*2}`}/>);
     }
 
     var minsCircles = [];
