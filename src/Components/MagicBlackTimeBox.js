@@ -50,20 +50,14 @@ class MagicBlackTimeBox extends Component {
   checkWindowSize(){
     var windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    console.log(windowHeight);
-    console.log(windowWidth);
+    // console.log(windowHeight);
+    // console.log(windowWidth);
   //   $('#displaySize').text(windowWidth + 'W x ' +  windowHeight + 'H');
 
    if (windowWidth < windowHeight){
-      document.documentElement.style.setProperty('--clockSize', '73vw');
       return 'portrait';
-      // clockSize = (0.73 * windowWidth);
-      //  console.log('w:'+ clockSize);
     } else {
-       document.documentElement.style.setProperty('--clockSize', '73vh');
        return 'landscape'
-      //  clockSize = (0.73 * windowHeight);
-      // console.log('h: ' +clockSize);
     }
   }
 
@@ -76,7 +70,6 @@ class MagicBlackTimeBox extends Component {
 
 
     let orientation = this.checkWindowSize()
-    console.log(orientation)
     
     var hourCircles = [];
     for (let i = 0; i < clockHour; i++) {
