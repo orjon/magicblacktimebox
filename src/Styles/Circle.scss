@@ -53,17 +53,27 @@
   // }
 }
 
-.blue {
-  background-color: dodgerblue;
+.hour {
+  background-color: $colorHour;
+  border: 1px solid rgba(0,0,0,0);
+  box-shadow: 0 0px 15px 0 $colorHour;
 }
 
-.red{
-  background-color: palevioletred;
-
+.decs{
+  background-color: $colorDecs;
+  border: 1px solid rgba(0,0,0,0);
+  box-shadow: 0 0px 15px 0 $colorDecs;
 }
 
-.green {
-  background-color: teal;
+.mins {
+  background-color: $colorMins;
+  border: 1px solid rgba(0,0,0,0);
+  box-shadow: 0 0px 15px 0 $colorMins;
+}
+
+.empty {
+  background-color: rgba(0,0,0,0.2);
+  border: 1px dotted rgba(27, 27, 27, 0.8);
 }
 
 .pos0 {
@@ -100,16 +110,6 @@
   transform: rotate(300deg);
 }
 .pos11 {
-  transform: rotate(300deg);
+  transform: rotate(330deg);
 }
 
-
-.oneSeven {
-  position: absolute;
-  width: var(--clockSize);
-  height: var(--clockSize);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(30deg);
-  animation: indicatorExpand var(--speedAnimGrow) ease-out;
-}

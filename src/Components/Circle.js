@@ -5,11 +5,13 @@ class Circle extends Component {
   render() {
     let { color, text, position, row } = this.props
 
+    text = '';
+
 
     return(
       <div className={`CircleGroup ${position}`}>
         <div  className={`Circle1 ${color} ${row}`}>
-          {/* {text} */}
+          {text}
         </div>
         {/* <div  className={`Circle2 ${row}`}>
         </div> */}

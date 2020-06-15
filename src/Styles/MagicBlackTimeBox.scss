@@ -8,7 +8,6 @@
   border: $devBorder dashed white;
   color: orange;
   padding: 10px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,53 +23,70 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    height:800px;
-    width:800px;
+    height:850px;
+    width:850px;
     top: 50%;
     left: 50%;
 
-    .CircleHours {
-      border-radius: 50%;
-      display: flex;
-      flex-direction: row;  
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(30deg);
-      height: 90%;
-      width: 90%;
-      // border: 1px dashed blue
-    }
-    .CircleDecs {
-      border-radius: 50%;
-      display: flex;
-      flex-direction: row;  
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(60deg);
-      height: 70%;
-      width: 70%;
-      // border: 1px dashed red
-    }
-    .CircleMins {
-      border-radius: 50%;
-      display: flex;
-      flex-direction: row;  
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(60deg);
-      height: 50%;
-      width: 50%;
-      // border: 1px dashed green
-    }
+    // .empty {
+    //   border-radius: 50%;
+    //   display: flex;
+    //   flex-direction: row;  
+    //   justify-content: center;
+    //   align-items: center;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%) rotate(30deg);
+    //   height: 90%;
+    //   width: 90%;
+    // }
+
+    
+  }
+
+
+  .CircleHours {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+    height: $ringOuter;
+    width: $ringOuter;
+    border: $devBorder dashed blue
+  }
+  .CircleDecs {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(60deg);
+    height: 70%;
+    width: 70%;
+    border: $devBorder dashed red
+  }
+  .CircleMins {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(60deg);
+    height: 50%;
+    width: 50%;
+    border: $devBorder dashed green
   }
 
 
