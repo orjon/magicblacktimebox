@@ -13,70 +13,44 @@
 
 }
 
-.Circle1{
-
+.Circle{
   color: white;
   background-color: rgba(0,0,0,0);
   height: $CircleSize;
   width: $CircleSize;
-  max-height: 5vw;
-  max-width: 5vw;
+  max-width: $CircleSizeMax;
+  max-height: $CircleSizeMax;
   border-radius: 50%;
   display: flex;
   font-weight: 600;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  // &.rowDecs {
-  //   margin: 75px 0;
-  // }
-  // &.rowMins {
-  //   margin: 150px 0;
-  // }
+  &.hour {
+    background-color: $colorHour;
+    border: 1px solid rgba(0,0,0,0);
+    box-shadow: 0 0px 15px 0 $colorHour;
+  }
+  &.decs{
+    background-color: $colorDecs;
+    border: 1px solid rgba(0,0,0,0);
+    box-shadow: 0 0px 15px 0 $colorDecs;
+  }
+  &.mins {
+    background-color: $colorMins;
+    border: 1px solid rgba(0,0,0,0);
+    box-shadow: 0 0px 15px 0 $colorMins;
+  }
+  &.empty {
+    background-color: $colorEmpty;
+    border: 1px dotted rgba(27, 27, 27, 0.8);
+    &.0 {
+      display: none;
+    }
+  }
 }
 
-.Circle2{
-  border: 1px dotted grey;
-  background-color: rgba(0,0,0,0.0);
-  color: white;
-  height: $CircleSize;
-  width: $CircleSize;
-  border-radius: 50%;
-  display: flex;
-  font-weight: 600;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  // &.rowDecs {
-  //   margin: 75px 0;
-  // }
-  // &.rowMins {
-  //   margin: 150px 0;
-  // }
-}
 
-.hour {
-  background-color: $colorHour;
-  border: 1px solid rgba(0,0,0,0);
-  box-shadow: 0 0px 15px 0 $colorHour;
-}
-
-.decs{
-  background-color: $colorDecs;
-  border: 1px solid rgba(0,0,0,0);
-  box-shadow: 0 0px 15px 0 $colorDecs;
-}
-
-.mins {
-  background-color: $colorMins;
-  border: 1px solid rgba(0,0,0,0);
-  box-shadow: 0 0px 15px 0 $colorMins;
-}
-
-.empty {
-  background-color: rgba(0,0,0,0.2);
-  border: 1px dotted rgba(27, 27, 27, 0.8);
-}
 
 .pos0 {
   transform: rotate(0deg);

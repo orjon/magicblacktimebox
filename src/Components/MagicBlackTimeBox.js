@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import Circle from './Circle';
-import '../Styles/MagicBlackTimeBox.scss';
 import Moment from 'react-moment';
 import 'moment-timezone';
+
+import Circle from './Circle';
+
+import '../Styles/MagicBlackTimeBox.scss';
+
 
 class MagicBlackTimeBox extends Component {
   constructor(props){
     super(props);
     this.state= {
       date: new Date(),
-      clockFace: [12,5,9,60]
+      clockFace: [12,5,9,60],
+      clickState: 0,
+      clickStates: ['black', 'grey', 'time']
       };
+
+    this.clicked = this.clicked.bind(this)
   }
 
 
@@ -61,61 +68,71 @@ class MagicBlackTimeBox extends Component {
     }
   }
 
+  clicked() {
+    let { clickState } = this.state;
+    clickState= clickState+ 1;
+    if (clickState===3) {
+      clickState=0
+    }
+    this.setState({clickState: clickState});
+  }
+
   
 
 
   render(){
 
-    let { clockHour, clockDecs, clockMins, clockFace } = this.state
+    let { clockHour, clockDecs, clockMins, clockFace, clickState, clickStates } = this.state
+
 
 
     let orientation = this.checkWindowSize()
     
     var hourCircles = [];
     for (let i = 0; i < clockHour; i++) {
-      hourCircles.push(<Circle text={i+1} row='rowHour' color='hour' position={`pos${i}`}/>);
+      hourCircles.push(<Circle text={i+1} key={i} row='rowHour' color='hour' position={`pos${i}`}/>);
     }
 
     var decsCircles = [];
     for (let i = 0; i < clockDecs; i++) {
-      decsCircles.push(<Circle text={i+1} row='rowDecs' color='decs' position={`pos${i*2}`}/>);
+      decsCircles.push(<Circle text={i+1} key={i} row='rowDecs' color='decs' position={`pos${i*2}`}/>);
     }
 
     var minsCircles = [];
     for (let i = 0; i < clockMins; i++) {
-      minsCircles.push(<Circle text={i+1} row='rowMins' color='mins' position={`pos${i}`}/>);
+      minsCircles.push(<Circle text={i+1} key={i} row='rowMins' color='mins' position={`pos${i}`}/>);
     }
 
     var hourCirclesEmpty = [];
     for (let i = 0; i < (clockFace[0]); i++) {
-      hourCirclesEmpty.push(<Circle text={i+1} row='rowHour' color='empty' position={`pos${i}`}/>);
+      hourCirclesEmpty.push(<Circle text={i+1} key={i} row='rowHour' color='empty' position={`pos${i}`}/>);
     }
 
     var decsCirclesEmpty = [];
     for (let i = 0; i < (clockFace[1]); i++) {
-      decsCirclesEmpty.push(<Circle text={i+1} row='rowDecs' color='empty' position={`pos${i*2}`}/>);
+      decsCirclesEmpty.push(<Circle text={i+1} key={i} row='rowDecs' color='empty' position={`pos${i*2}`}/>);
     }
 
     var minsCirclesEmpty = [];
     for (let i = 0; i < (clockFace[2]); i++) {
-      minsCirclesEmpty.push(<Circle text={i+1} row='rowMins' color='empty' position={`pos${i}`}/>);
+      minsCirclesEmpty.push(<Circle text={i+1} key={i} row='rowMins' color='empty' position={`pos${i}`}/>);
     }
 
 
 
 
     return(
-      <div className='MagicBlackTimeBox'>
-        <div className='Time'>
+      <div className={`MagicBlackTimeBox ${orientation} ${clickStates[clickState]}`} onClick={this.clicked}>
+        <div className={`Time ${clickStates[clickState]}`}>
           {this.state.theHour}:{this.state.theMins}:{this.state.theSecs}
         </div>
-        <div className={`ClockFace ${orientation}`}>
+        <div className={`ClockFace ${clickStates[clickState]}`}>
           <div className='CircleHours'>{hourCirclesEmpty}</div>
           <div className='CircleDecs'>{decsCirclesEmpty}</div>
           <div className='CircleMins'>{minsCirclesEmpty}</div>
         </div>
 
-        <div className={`ClockFace ${orientation}`}>
+        <div className='ClockFace'>
           <div className='CircleHours'>{hourCircles}</div>
           <div className='CircleDecs'>{decsCircles}</div>
           <div className='CircleMins'>{minsCircles}</div>

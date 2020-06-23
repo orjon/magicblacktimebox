@@ -1,4 +1,5 @@
 $CircleSize: 50px;
+$CircleSizeMax: 5vw;
 
 $devBorder: 0px;
 
@@ -7,6 +8,10 @@ $ringInner: 50%;
 $ringMiddle: calc($ringOuter-(($ringOuter-$ringInnner)/2));
 $ringMiddle: 75%;
 
+// background-color: #282c34;
+$colorEmpty: rgba(255,255,255,0.04);
+
+$colorTime: #555;
 $colorHour: blue;
 $colorDecs: red;
 $colorMins: lime;
